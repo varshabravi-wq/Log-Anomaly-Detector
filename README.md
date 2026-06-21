@@ -1,0 +1,30 @@
+# 🛡️ Enterprise Production Log Anomaly Radar & Alerting System
+
+An end-to-end, memory-optimized streaming telemetry dashboard designed to ingest production server transaction logs, run live feature extraction, and leverage an unsupervised **Isolation Forest** machine learning algorithm to intercept and isolate security anomalies in real-time.
+
+---
+
+## 🚀 Key Architectural Features
+* **Streaming Architecture:** Uses lazy chunk-loading arrays via Pandas to ingest mass raw transactional inputs row-by-row with minimal overhead, simulating a true streaming telemetry line.
+* **Defensive Engineering Block:** Outfitted with robust `try-except` execution checkpoints to catch, log, and skip malformed or corrupt numerical payloads without interrupting the live visualization stream.
+* **Persistent Session State Memory:** Leverages custom state tokens to prevent data volatility, ensuring metrics, charts, and audit logs remain fully visible on the user interface even after the data stream finishes or halts.
+* **Incident Audit Exporter:** Features a one-click dynamic forensic reporting module to package and download captured infrastructure anomalies directly into standard `.csv` spreads for automated incident distribution.
+
+---
+
+## 🛠️ Technological Infrastructure Stack
+* **Frontend UI Framework:** Streamlit (Custom Dark Matrix CSS Styling overrides)
+* **Core Analytics Platform:** Pandas, NumPy
+* **Machine Learning Intelligence Core:** Scikit-Learn (Unsupervised Outlier Isolation Model Core)
+* **State Compression Serialization:** Joblib
+
+---
+
+## ⚡ Setup & Production Replication Guide
+
+To replicate, evaluate, or scale this monitoring infrastructure locally on your machine, follow these configurations:
+
+### 1. Initialize Project Directory & Dependencies
+Clone or download this repository, navigate into the core project folder using your terminal interface, and install the required environment manifest:
+```bash
+pip install -r requirements.txt
