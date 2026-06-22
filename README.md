@@ -28,3 +28,36 @@ To replicate, evaluate, or scale this monitoring infrastructure locally on your 
 Clone or download this repository, navigate into the core project folder using your terminal interface, and install the required environment manifest:
 ```bash
 pip install -r requirements.txt
+
+# 🛡️ Enterprise Production Log Anomaly Radar & Alerting System
+
+A real-time, end-to-end telemetry surveillance pipeline that ingests simulated system logs, evaluates payload features using an unsupervised **Isolation Forest** Machine Learning model, and automatically dispatches automated breach alerts to a **Discord Security Operations (SecOps)** channel when anomaly thresholds are violated.
+
+🚀 **Live Production Link:** [Insert Your Streamlit Sharing URL Here]
+
+---
+
+## 📈 System Architecture & Flow
+
+1. **Telemetry Data Stream:** Ingests live production server logs sequentially via a custom Pandas chunking engine.
+2. **Defensive Preprocessing Block:** Sanitizes missing metrics, calculates dynamic operational engagement factors, and catches malformed network payloads safely.
+3. **Machine Learning Core:** Leverages an unsupervised Isolation Forest model to detect feature anomalies and malicious traffic spikes.
+4. **Automated Incident Response Wrapper:** Serializes data metrics dynamically and ships webhook payloads directly to an external API (Discord) upon threshold breach.
+
+---
+
+## 🛠️ Tech Stack & Tooling
+
+* **Language:** Python 3.x
+* **Framework:** Streamlit (Dynamic Live UI Dashboard)
+* **Machine Learning:** Scikit-Learn (Isolation Forest Outlier Detection)
+* **Serialization & Analytics:** Pandas, Joblib, JSON
+* **Alerting Protocol:** Discord Webhook REST API Integration via `requests`
+
+---
+
+## ⚙️ Core Engineering Features
+
+* **Real-Time Data Ingestion:** Processes simulated system activity seamlessly with adjustable telemetry speeds.
+* **Granular Controls:** Dynamic sidebar options to adjust outlier contamination levels and alert tripwire sensitivities on the fly.
+* **Audit Trail Export:** Generates an on-demand, down-loadable incident log CSV for post-breach forensic analysis.
